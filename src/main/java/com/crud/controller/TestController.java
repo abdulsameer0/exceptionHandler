@@ -39,7 +39,7 @@ public class TestController
 
     @GetMapping("/api3")
     public String method3(){
-        return "This is a third method";
+        return "This is a third method!!";
 
     }
 }
