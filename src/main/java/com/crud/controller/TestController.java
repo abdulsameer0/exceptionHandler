@@ -1,5 +1,6 @@
 package com.crud.controller;
 
+import com.crud.exception.TestException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,8 +39,9 @@ public class TestController
     }
 
     @GetMapping("/api3")
-    public String method3(){
-        return "This is a third method!!";
+    public String method3() throws TestException{
+                   throw new TestException("this is a test exception");
+     //   return "This is a third method!!";
 
     }
 }
